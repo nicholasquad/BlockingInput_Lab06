@@ -6,7 +6,6 @@ public class CtoFConverter {
         Scanner in = new Scanner(System.in);
         double tempC = 0;
         double tempF = 0;
-        double convertTempC = 0;
         String trash = ""; // use for bad input which will read as a String
         boolean done = false;
         do
@@ -15,10 +14,10 @@ public class CtoFConverter {
             if(in.hasNextDouble()) // OK safe to read in a double
             {
                 tempC = in.nextDouble();
-                tempC = convertTempC;
+                tempF = tempC * 1.8 + 32;
                 in.nextLine(); // clears the newline from the buffer
                 done = true; // we got a valid number so we can end the loop
-                System.out.println("Your temperature" + tempC + " is " + tempF + " in Celcius");
+                System.out.println("Your temperature " + tempC + " is " + tempF + " in Celcius");
             }
             else
             {
